@@ -1,12 +1,11 @@
 import React from "react";
-import { SiJordan } from "react-icons/si";
+import { SiJordan, SiNike } from "react-icons/si";
 import { FaStar } from "react-icons/fa";
-import { SiNike } from "react-icons/si";
-
 import {
   IoPersonOutline,
   IoSearchOutline,
   IoCartOutline,
+  IoHeartOutline,
 } from "react-icons/io5";
 import { MdOutlineDensityMedium } from "react-icons/md";
 
