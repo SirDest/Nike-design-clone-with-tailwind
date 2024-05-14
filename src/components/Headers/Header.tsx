@@ -1,14 +1,18 @@
 import React, { useState } from "react";
 import { SiNike } from "react-icons/si";
-
 import {
   IoSearchOutline,
   IoCartOutline,
   IoHeartOutline,
 } from "react-icons/io5";
 import TopHeader from "./TopHeader";
+import Search from "./Search";
 
-const Header = () => {
+const Header: React.FC = () => {
+  const [searchBar, setSearchBar] = useState(true);
+  const handleSearch = () => {
+    setSearchBar(true);
+  };
   const generateClassName = (classes: string[]) => {
     return classes.join(" ");
   };
@@ -25,7 +29,7 @@ const Header = () => {
     "hover:border-black",
     "cursor-pointer",
     "ease-in-out",
-    " duration-300",
+    "duration-300",
   ];
 
   const headerIcons = [
@@ -41,13 +45,15 @@ const Header = () => {
     "cursor-pointer",
   ];
   return (
-    <div>
+    <div className='relative'>
       <TopHeader />
       <div className='w-full h-fit hidden lg:flex justify-between px-6 lg:px-12 py-1 xl:text-2xl'>
         <div>
-          <SiNike className='block text-[50px] text-black hover:text-[#A9A9A9] ease-in-out duration-300 m-auto' />
+          <a href='/'>
+            <SiNike className='block text-[50px] text-black hover:text-[#A9A9A9] ease-in-out duration-300 m-auto' />
+          </a>
         </div>
-        <ul className='flex content-center m-auto font-bold text-[17px]'>
+        <ul className='flex content-center m-auto font-bold text-[15px]'>
           <li className={generateClassName(navBarItems)}>New & Featured</li>
           <li className={generateClassName(navBarItems)}>Men</li>
           <li className={generateClassName(navBarItems)}>Women</li>
@@ -63,10 +69,12 @@ const Header = () => {
             <input
               type='text'
               placeholder='Search'
-              className='bg-[#F5F5F5] hover:placeholder-gray-700 text-[17px] font-bold m-auto outline-none p-0 w-[130px] text-black rounded-[30px]'
+              className='bg-[#F5F5F5] active:placeholder-white text-[17px] font-bold m-auto outline-none p-0 w-[130px] text-black rounded-[30px]'
               onChange={handleChange}
+              onClick={() => setSearchBar(false)}
             />
           </div>
+
           <div className={generateClassName(headerIcons)}>
             <IoHeartOutline />
           </div>
@@ -74,6 +82,14 @@ const Header = () => {
             <IoCartOutline />
           </div>
         </div>
+      </div>
+      <div
+        style={{
+          display: !searchBar ? "block" : "none",
+        }}
+        className='absolute block top-0 left-0 w-full h-screen bg-transparent backdrop-filter backdrop-blur-sm'
+      >
+        <Search setSearchBar={setSearchBar} />
       </div>
     </div>
   );
