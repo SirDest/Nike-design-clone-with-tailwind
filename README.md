@@ -1,1 +1,1 @@
-# Desgining Nikew Website with React, Typescript, Tailwind
+# Desgining Nike Website with React, Typescript, Tailwind
