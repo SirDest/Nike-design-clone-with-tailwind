@@ -1,6 +1,7 @@
 import React, { Dispatch, SetStateAction } from "react";
-import { IoClose } from "react-icons/io5";
-import { FaChevronRight } from "react-icons/fa";
+import { IoCloseOutline } from "react-icons/io5";
+
+import { TfiAngleRight } from "react-icons/tfi";
 
 interface MyComponentProps {
   setSideBar: Dispatch<SetStateAction<boolean>>;
@@ -15,45 +16,70 @@ const navBarItems = [
   "cursor-pointer",
   "ease-in-out",
   "duration-300",
-  "text-[25px]",
+  "text-[22px]",
   "flex",
+  "m-auto",
+  "w-full",
+  "items-center",
   "justify-between",
+  "text-[15px]",
 ];
+
+const iconStyles = ["text-[13px]", "font-bold"];
 
 const ResponsiveSideBar: React.FC<MyComponentProps> = ({ setSideBar }) => {
   const handleSideBar = () => {
-    setSideBar(true);
+    setSideBar((prevState) => !prevState);
   };
+
   return (
-    <div className='h-full w-[270px] bg-blue-600 flex lg:hidden flex-col px-3 py-5'>
+    <div className='h-full bg-white w-[270px] flex lg:hidden flex-col py-4'>
       <div
         onClick={handleSideBar}
-        className='flex justify-end text-right cursor-pointer text-[24px] hover:text-gray-800'
+        className='flex justify-end text-right cursor-pointer font-light px-6'
       >
-        <IoClose />
+        <div className=' border-none rounded-[50%] hover:bg-[#a9a9a9] text-[25px] p-1 ease-in-out duration-300'>
+          <IoCloseOutline />
+        </div>
       </div>
-      <div>
-        <ul className='flex flex-col content-center m-auto font-bold text-[15px]'>
-          <li className={generateClassName(navBarItems)}>
-            New & Featured <FaChevronRight />
-          </li>
-          <li className={generateClassName(navBarItems)}>
-            Men <FaChevronRight />
-          </li>
-          <li className={generateClassName(navBarItems)}>
-            Women <FaChevronRight />
-          </li>
-          <li className={generateClassName(navBarItems)}>
-            Kids <FaChevronRight />
-          </li>
-          <li className={generateClassName(navBarItems)}>
-            Jordan <FaChevronRight />
-          </li>
-          <li className={generateClassName(navBarItems)}>
-            Sale <FaChevronRight />
-          </li>
-        </ul>
-      </div>
+      <ul className='flex flex-col w-full content-center py-2 px-7'>
+        <li className={generateClassName(navBarItems)}>
+          <p>New & Featured</p>
+          <p className={generateClassName(iconStyles)}>
+            <TfiAngleRight />
+          </p>
+        </li>
+        <li className={generateClassName(navBarItems)}>
+          <span>Men </span>
+          <span>
+            <TfiAngleRight className={generateClassName(iconStyles)} />
+          </span>
+        </li>
+        <li className={generateClassName(navBarItems)}>
+          <span>Women</span>
+          <span>
+            <TfiAngleRight className={generateClassName(iconStyles)} />
+          </span>
+        </li>
+        <li className={generateClassName(navBarItems)}>
+          <span>Kids</span>
+          <span>
+            <TfiAngleRight className={generateClassName(iconStyles)} />
+          </span>
+        </li>
+        <li className={generateClassName(navBarItems)}>
+          <span>Jordan</span>
+          <span>
+            <TfiAngleRight className={generateClassName(iconStyles)} />
+          </span>
+        </li>
+        <li className={generateClassName(navBarItems)}>
+          <span>Sale</span>
+          <span>
+            <TfiAngleRight className={generateClassName(iconStyles)} />
+          </span>
+        </li>
+      </ul>
     </div>
   );
 };

@@ -110,9 +110,9 @@ const TopHeader = () => {
       </div>
       <div
         style={{
-          display: !sideBar ? "flex" : "none",
+          display: !sideBar ? "none" : "flex",
         }}
-        className='absolute top-0 left-0 w-full h-screen lg:hidden justify-end bg-transparent backdrop-filter backdrop-blur-sm'
+        className='absolute top-0 left-0 w-full h-screen lg:none justify-end bg-transparent backdrop-filter backdrop-blur-sm'
       >
         <ResponsiveSideBar setSideBar={setSideBar} />
       </div>
