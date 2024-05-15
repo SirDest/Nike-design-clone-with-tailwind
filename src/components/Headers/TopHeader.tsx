@@ -9,9 +9,14 @@ import {
 } from "react-icons/io5";
 import { MdOutlineDensityMedium } from "react-icons/md";
 import ResponsiveSideBar from "./ResponsiveSideBar";
+import Search from "./Search";
 
 const TopHeader = () => {
   const [sideBar, setSideBar] = useState(false);
+  const [searchBar, setSearchBar] = useState(false);
+  const handleSearch = () => {
+    setSearchBar(true);
+  };
   const handleSideBar = () => {
     setSideBar((prevState) => !prevState);
   };
@@ -85,7 +90,10 @@ const TopHeader = () => {
           </li>
         </ul>
         <ul className='lg:hidden flex gap-1 md:gap-3'>
-          <li className={generateClassName(responsiveClassNames)}>
+          <li
+            onClick={handleSearch}
+            className={generateClassName(responsiveClassNames)}
+          >
             <a href='/'>
               <IoSearchOutline />
             </a>
@@ -115,6 +123,12 @@ const TopHeader = () => {
         className='absolute z-10 top-0 left-0 w-full h-screen lg:none justify-end bg-transparent backdrop-filter backdrop-blur-sm'
       >
         <ResponsiveSideBar setSideBar={setSideBar} />
+      </div>
+      <div
+        style={{ display: searchBar ? "block" : "none" }}
+        className='absolute z-20 top-0 left-0 w-full h-screen bg-transparent backdrop-filter backdrop-blur-sm'
+      >
+        <Search setSearchBar={setSearchBar} />
       </div>
     </div>
   );

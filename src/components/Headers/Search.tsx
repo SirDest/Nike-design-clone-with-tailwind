@@ -3,6 +3,7 @@ import { IoSearchOutline } from "react-icons/io5";
 import { SiNike } from "react-icons/si";
 interface MyComponentProps {
   setSearchBar: Dispatch<SetStateAction<boolean>>;
+  // setShowBar: Dispatch<SetStateAction<boolean>>;
 }
 
 const popularSearch = ["Air Force 1", "Jordan", "Air Max", "Blazer"];
@@ -14,7 +15,7 @@ const Search: React.FC<MyComponentProps> = ({ setSearchBar }) => {
     setsearchtext(e.target.value);
   };
   const removeSearch = () => {
-    setSearchBar((prevState) => !prevState);
+    setSearchBar(false);
   };
 
   return (
@@ -32,7 +33,7 @@ const Search: React.FC<MyComponentProps> = ({ setSearchBar }) => {
           <input
             type='text'
             placeholder='Search'
-            className='bg-[#F5F5F5] active:placeholder-white text-[17px] font-bold m-auto outline-none p-0 lg:w-[400px] text-black rounded-[30px]'
+            className='bg-[#F5F5F5] active:placeholder-white text-[17px] font-semibold m-auto outline-none p-0 lg:w-[400px] text-black rounded-[30px]'
             onChange={handleChange}
           />
         </div>
