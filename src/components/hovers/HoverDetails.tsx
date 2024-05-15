@@ -1,0 +1,278 @@
+export const NewAndFeaturedItems = [
+  { head: "Limited Time", details: ["Sale: Up to 50% Off"] },
+  {
+    head: "New & Featured",
+    details: ["New Arrivals", "Best Sellers", "New & Upcoming Drops"],
+  },
+  {
+    head: "Trending",
+    details: [
+      "ACD",
+      "Lifestyle Running",
+      "Color Shop",
+      "Shop Sport",
+      "New in Jordan Shoes",
+    ],
+  },
+  {
+    head: "Shop Classics",
+    details: [
+      "Dunk",
+      "Air Jordans",
+      "Air Force",
+      "Air Max",
+      "Blazer",
+      "Vomero",
+    ],
+  },
+  {
+    head: "Explore",
+    details: [
+      "SNKRS Launch Calendar",
+      "Running Shoe Finder",
+      "Bra Finder",
+      "Product Care",
+      "Member Rewards",
+      "Buying Guides",
+    ],
+  },
+];
+export const MenItems = [
+  { head: "Limited Time", details: ["Sale: Up to 50% Off"] },
+  {
+    head: "New & Featured",
+    details: ["New Arrivals", "Best Sellers", "New & Upcoming Drops"],
+  },
+  {
+    head: "Shoes",
+    details: [
+      "All Shoes",
+      "Lifestyle",
+      "Jordans",
+      "Dunk",
+      "Lifestyle Running",
+      "Air Max",
+      "Air Force 1",
+      "Training & Gym",
+      "Basketball",
+      "Running",
+      "Nike SB",
+      "Sandals & Slides",
+      "Nike by You",
+      "Shoes $100 & Under",
+    ],
+  },
+  {
+    head: "Clothing",
+    details: [
+      "All Clothing",
+      "Hoodies & Sweatshirts",
+      "Shorts",
+      "Pants & Tights",
+      "Jackets & Vest",
+      "Shirts & T-Shirts",
+      "Matching Shirts",
+      "Big & Tall",
+      "Jordan",
+    ],
+  },
+  {
+    head: "Shop by Sport",
+    details: [
+      "Basketball",
+      "Running",
+      "Golf",
+      "Soccer",
+      "Training & Gym",
+      "Tennis",
+      "Baseball",
+      "Football",
+      "Trail Running",
+      "Swimming",
+      "Pickleball",
+      "Fan Ball",
+    ],
+  },
+  {
+    head: "Accessories",
+    details: ["All Accessories", "Bags & Bagpack", "Hats & Head Wear", "Socks"],
+  },
+];
+export const WomenItems = [
+  { head: "Limited Time", details: ["Sale: Up to 50% Off"] },
+  {
+    head: "New & Featured",
+    details: ["New Arrivals", "Best Sellers", "New & Upcoming Drops"],
+  },
+  {
+    head: "Shoes",
+    details: [
+      "All Shoes",
+      "Lifestyle",
+      "Jordans",
+      "Dunk",
+      "Lifestyle Running",
+      "Air Max",
+      "Air Force 1",
+      "Training & Gym",
+      "Basketball",
+      "Running",
+      "Nike SB",
+      "Sandals & Slides",
+      "Nike by You",
+      "Shoes $100 & Under",
+    ],
+  },
+  {
+    head: "Collections",
+    details: [
+      "The Color Shop",
+      "Zenvy Collection",
+      "Loungewear",
+      "Trail Running Essentials",
+    ],
+  },
+  {
+    head: "Clothing",
+    details: [
+      "All Clothing",
+      "Hoodies & Sweatshirts",
+      "Shorts",
+      "Pants",
+      "Leggings",
+      "Jackets & Vest",
+      "Top & T-Shirts",
+      "Skirts& Dresses",
+      "Bra",
+      "Matching Set",
+      "Plus Size",
+      "Tall",
+    ],
+  },
+  {
+    head: "Shop by Sport",
+    details: [
+      "Basketball",
+      "Running",
+      "Golf",
+      "Soccer",
+      "Training & Gym",
+      "Tennis",
+      "Baseball",
+      "Football",
+      "Trail Running",
+      "Swimming",
+      "Pickleball",
+      "Fan Ball",
+    ],
+  },
+];
+export const SaleItems = [
+  {
+    head: "Sale: Up to 50% Off",
+    details: ["Sale Shoes", "Sale Clothing", "Sale Accessories"],
+  },
+  { head: "Men", details: ["Shoes", "Clothing", "Accessories", "Shop All"] },
+  { head: "Women", details: ["Shoes", "Clothing", "Accessories", "Shop All"] },
+  { head: "Kids", details: ["Shoes", "Clothing", "Accessories"] },
+];
+export const JordanItems = [
+  { head: "Limited Time", details: ["Sale: Up to 50% Off"] },
+  {
+    head: "New & Featured",
+    details: ["New Arrivals", "Best Sellers", "New & Upcoming Drops"],
+  },
+  {
+    head: "Men",
+    details: ["Shop All", "Shoes", "AJ1", "Clothing", "Basketball"],
+  },
+  {
+    head: "Women",
+    details: ["Shop All", "Shoes", "AJ1", "Clothing", "Basketball"],
+  },
+  {
+    head: "Kids",
+    details: [
+      "Shop All",
+      "Shoes",
+      "AJ1",
+      "Clothing",
+      "Basketball",
+      "Big Kids",
+      "Little Kids",
+      "Baby & Toddler",
+    ],
+  },
+  {
+    head: "Collections",
+    details: [
+      "Heat Check",
+      "Bags & Bagpack",
+      "Trending Colors",
+      "Golf Essentials",
+      "Girls Lemonade Stand",
+    ],
+  },
+  {
+    head: "Accessories",
+    details: ["All Accessories", "Bags & Bagpack", "Hats & Head Wear"],
+  },
+];
+export const KidsItems = [
+  { head: "Limited Time", details: ["Sale: Up to 50% Off"] },
+  {
+    head: "New & Featured",
+    details: ["New Arrivals", "Best Sellers", "New & Upcoming Drops"],
+  },
+  {
+    head: "Shoes by Size",
+    details: [
+      "Big Kids (1Y - 7Y)",
+      "Little Kids (8C - 3Y)",
+      "Baby & Toddler (1C - 10C)",
+    ],
+  },
+  {
+    head: "All Shoes",
+    details: [
+      "Lifestyle",
+      "Jordan",
+      "Dunk",
+      "Air Max",
+      "Air Force 1",
+      "Basketball",
+      "Running",
+      "Sandals & Slides",
+    ],
+  },
+  {
+    head: "All Clothing",
+    details: [
+      "Hoodies & Sweatshirts",
+      "Shorts",
+      "Pants & Tights",
+      "Jackets & Vests",
+      "Tops & T-Shirts",
+      "Skirts & Dresses",
+      "Bras",
+      "Matching Sets",
+      "Jordan",
+    ],
+  },
+  {
+    head: "Shop by Sport",
+    details: [
+      "Basketball",
+      "Running",
+      "Golf",
+      "Soccer",
+      "Baseball",
+      "Football",
+      "Softball",
+      "Dance",
+      "Swimming",
+      "Skateboarding",
+      "Fan Gear",
+    ],
+  },
+];

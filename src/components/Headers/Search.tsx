@@ -1,10 +1,4 @@
-import React, {
-  Dispatch,
-  SetStateAction,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { IoSearchOutline } from "react-icons/io5";
 import { SiNike } from "react-icons/si";
 interface MyComponentProps {
@@ -14,22 +8,17 @@ interface MyComponentProps {
 const popularSearch = ["Air Force 1", "Jordan", "Air Max", "Blazer"];
 
 const Search: React.FC<MyComponentProps> = ({ setSearchBar }) => {
-  const inputRef = useRef<HTMLInputElement>(null);
-  const removeSearch = () => {
-    setSearchBar(true);
-  };
-  const [searchInput, setSearchInput] = useState("");
+  const [searchText, setsearchtext] = useState("");
+
   const handleChange = (e: any) => {
-    setSearchInput(e.target.value);
+    setsearchtext(e.target.value);
   };
-  useEffect(() => {
-    if (inputRef.current) {
-      inputRef.current.focus();
-    }
-  }, []);
+  const removeSearch = () => {
+    setSearchBar((prevState) => !prevState);
+  };
 
   return (
-    <div className='w-full h-fit bg-white flex justify-between px-6 py-4'>
+    <div className='z-20 w-full h-fit bg-white flex justify-between px-6 py-4'>
       <div>
         <a href='/'>
           <SiNike className='block text-[20px] md:text-[50px] text-black hover:text-[#A9A9A9] ease-in-out duration-300' />
@@ -41,7 +30,6 @@ const Search: React.FC<MyComponentProps> = ({ setSearchBar }) => {
             <IoSearchOutline className='m-auto cursor-pointer text-15px md:text-[20px]' />
           </div>
           <input
-            ref={inputRef}
             type='text'
             placeholder='Search'
             className='bg-[#F5F5F5] active:placeholder-white text-[17px] font-bold m-auto outline-none p-0 lg:w-[400px] text-black rounded-[30px]'
@@ -63,7 +51,10 @@ const Search: React.FC<MyComponentProps> = ({ setSearchBar }) => {
         </div>
       </div>
       <div>
-        <button onClick={removeSearch} className='flex font-semibold'>
+        <button
+          onClick={removeSearch}
+          className='flex font-semibold cursor-pointer'
+        >
           Cancel
         </button>
       </div>

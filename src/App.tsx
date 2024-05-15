@@ -6,7 +6,6 @@ import Hero from "./components/Landing/Hero";
 function App() {
   return (
     <div>
-      <Header />
       <Hero />
     </div>
   );
