@@ -4,12 +4,13 @@ import { FaStar } from "react-icons/fa";
 import {
   IoPersonOutline,
   IoSearchOutline,
-  IoCartOutline,
+  IoBagOutline,
   IoHeartOutline,
 } from "react-icons/io5";
 import { MdOutlineDensityMedium } from "react-icons/md";
 import ResponsiveSideBar from "./ResponsiveSideBar";
 import Search from "./Search";
+import { Transition } from "@tailwindui/react";
 
 const TopHeader = () => {
   const [sideBar, setSideBar] = useState(false);
@@ -94,13 +95,11 @@ const TopHeader = () => {
             onClick={handleSearch}
             className={generateClassName(responsiveClassNames)}
           >
-            <a href='/'>
-              <IoSearchOutline />
-            </a>
+            <IoSearchOutline />
           </li>
           <li className={generateClassName(responsiveClassNames)}>
             <a href='/'>
-              <IoCartOutline />
+              <IoBagOutline />
             </a>
           </li>
           <li className={generateClassName(responsiveClassNames)}>
@@ -120,7 +119,7 @@ const TopHeader = () => {
         style={{
           display: !sideBar ? "none" : "flex",
         }}
-        className='absolute z-10 top-0 left-0 w-full h-screen lg:none justify-end bg-transparent backdrop-filter backdrop-blur-sm'
+        className='absolute z-10 top-0 left-0 w-full h-fit lg:none justify-end bg-transparent backdrop-filter backdrop-blur-sm'
       >
         <ResponsiveSideBar setSideBar={setSideBar} />
       </div>

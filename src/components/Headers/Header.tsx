@@ -1,10 +1,6 @@
 import React, { Dispatch, SetStateAction, useState } from "react";
 import { SiNike } from "react-icons/si";
-import {
-  IoSearchOutline,
-  IoCartOutline,
-  IoHeartOutline,
-} from "react-icons/io5";
+import { IoSearchOutline, IoBagOutline, IoHeartOutline } from "react-icons/io5";
 import TopHeader from "./TopHeader";
 import Search from "./Search";
 import { Transition } from "@tailwindui/react";
@@ -153,7 +149,7 @@ const Header: React.FC<MyComponentProps> = ({
             <IoHeartOutline />
           </div>
           <div className={generateClassName(headerIcons)}>
-            <IoCartOutline />
+            <IoBagOutline />
           </div>
         </div>
       </div>
