@@ -34,12 +34,14 @@ const TopHeader = () => {
     "ease-in-out",
     "duration-300 ",
     "m-auto",
+    "cursor-pointer",
   ];
   const navBarClassNames = [
     "px-3",
     "hover: text - [#A9A9A9]",
     "ease -in -out",
     "duration - 300",
+    "hover:text-[#A9A9A9]",
   ];
   const responsiveClassNames = [
     "m-auto",
