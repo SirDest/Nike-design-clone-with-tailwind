@@ -1,12 +1,13 @@
 import React from "react";
 import "./App.css";
-import Header from "./components/Headers/Header";
 import Hero from "./components/Landing/Hero";
+import Main from "./components/Main/Main";
 
 function App() {
   return (
-    <div>
+    <div className='flex flex-col'>
       <Hero />
+      <Main />
     </div>
   );
 }

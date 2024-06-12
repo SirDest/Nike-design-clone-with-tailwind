@@ -43,7 +43,6 @@ const navBarItems = [
   "p-1",
   "cursor-pointer",
   "ease-in-out",
-  "duration-300",
   "text-[22px]",
   "flex",
   "m-auto",
