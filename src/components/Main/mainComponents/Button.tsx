@@ -3,13 +3,14 @@ const generateClassName = (classes: string[]) => {
   return classes.join(" ");
 };
 const styles = [
-  "border-black",
-  "hover:border-gray-500",
+  "border",
+  "border-white",
+  "hover:border-gray-300",
+  "hover:bg-gray-300",
   "outline-none",
   "text-[17px]",
-  "bg-black",
-  "hover:bg-gray-500",
-  "text-white",
+  "bg-white",
+  "text-black",
   "px-4",
   "py-1",
   "w-fit",
@@ -21,9 +22,15 @@ const styles = [
 interface ButtonProps {
   children: React.ReactNode;
   handleClick?: () => void;
+
   disabled?: boolean;
 }
-const BlackButton = ({ children, handleClick, disabled }: ButtonProps) => {
+const Button = ({
+  children,
+  handleClick,
+
+  disabled,
+}: ButtonProps) => {
   return (
     <button
       onClick={handleClick}
@@ -35,4 +42,4 @@ const BlackButton = ({ children, handleClick, disabled }: ButtonProps) => {
   );
 };
 
-export default BlackButton;
+export default Button;

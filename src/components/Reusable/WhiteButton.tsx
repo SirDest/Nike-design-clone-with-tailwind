@@ -14,6 +14,8 @@ const styles = [
   "py-1",
   "w-fit",
   "rounded-[23px]",
+  "ease-in-out",
+  "duration-300",
 ];
 
 interface ButtonProps {
