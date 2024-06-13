@@ -40,7 +40,7 @@ const Running = () => {
         >
           <div className={generateClassName(style)}>
             <p>{name}</p>
-            <Button>Shop</Button>
+            <Button href='/'>Shop</Button>
           </div>
         </div>
       ))}

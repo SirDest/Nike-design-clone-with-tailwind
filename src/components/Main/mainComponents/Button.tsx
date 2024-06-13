@@ -22,23 +22,17 @@ const styles = [
 interface ButtonProps {
   children: React.ReactNode;
   handleClick?: () => void;
-
-  disabled?: boolean;
+  href: string;
 }
-const Button = ({
-  children,
-  handleClick,
-
-  disabled,
-}: ButtonProps) => {
+const Button = ({ children, handleClick, href }: ButtonProps) => {
   return (
-    <button
+    <a
+      href={href}
       onClick={handleClick}
-      disabled={disabled}
       className={`${generateClassName(styles)}`}
     >
       {children}
-    </button>
+    </a>
   );
 };
 
