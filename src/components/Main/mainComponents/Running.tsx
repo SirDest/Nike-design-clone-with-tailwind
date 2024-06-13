@@ -1,4 +1,6 @@
 import Button from "./Button";
+import men from "../../../static/images/manjogging.jpg";
+import women from "../../../static/images/womanjogging.jpg";
 
 const generateClassName = (classes: string[]) => {
   return classes.join(" ");
@@ -15,21 +17,33 @@ const style = [
   "text-white",
 ];
 
+const mainStyle = ["w-full", "lg:w-1/2", "h-[400px]", "relative"];
+const items = [
+  { name: "Men's Running", image: men },
+  { name: "Women's Running", image: women },
+];
+
 const Running = () => {
   return (
-    <div className='w-full h-fit flex flex-col md:flex-row justify-center'>
-      <div className='bg-gray-600 w-full md:w-1/2 h-[400px] relative'>
-        <div className={generateClassName(style)}>
-          <p>Men's Running</p>
-          <Button>Shop</Button>
+    <div className='w-full h-fit flex flex-col lg:flex-row justify-center'>
+      {items.map(({ name, image }) => (
+        <div
+          key={name}
+          style={{
+            background: `rgba(0,0,0,0.5) url(${image})`,
+            backgroundBlendMode: "darken",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+          className={generateClassName(mainStyle)}
+        >
+          <div className={generateClassName(style)}>
+            <p>{name}</p>
+            <Button>Shop</Button>
+          </div>
         </div>
-      </div>
-      <div className='bg-purple-600 w-full md:w-1/2 h-[400px] relative'>
-        <div className={generateClassName(style)}>
-          <p>Women's Running</p>
-          <Button>Shop</Button>
-        </div>
-      </div>
+      ))}
     </div>
   );
 };

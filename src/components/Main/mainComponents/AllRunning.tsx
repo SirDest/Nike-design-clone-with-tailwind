@@ -1,19 +1,22 @@
 import React from "react";
+import apparelImg from "../../../static/images/product2.jpg";
+import footwearImg from "../../../static/images/product1.jpg";
+import accessoriesImg from "../../../static/images/product3.jpg";
 
 const running = [
   {
     name: "Apparel",
-    image: "not yet",
+    image: apparelImg,
     link: "/",
   },
   {
     name: "Footwear",
-    image: "not yet",
+    image: footwearImg,
     link: "/",
   },
   {
     name: "Accessories & Equipment",
-    image: "not yet",
+    image: accessoriesImg,
     link: "/",
   },
 ];
@@ -21,6 +24,7 @@ const running = [
 const generateClassName = (classes: string[]) => {
   return classes.join(" ");
 };
+
 const style = [
   "absolute",
   "left-[40px]",
@@ -32,9 +36,10 @@ const style = [
   "font-semibold ",
   "text-white",
 ];
+
 const AllRunning = () => {
   return (
-    <div className='px-6 lg:px-12 h-fit py-[50px] flex flex-col gap-4'>
+    <div className='px-3 md:px-6 lg:px-12 h-fit py-[50px] flex flex-col gap-4'>
       <div className='w-full h-full font-semibold text-[25px]'>
         <p>Shop All Running</p>
       </div>
@@ -43,7 +48,14 @@ const AllRunning = () => {
           <a
             key={name}
             href={link}
-            className='bg-gray-600 w-full md:w-1/3 md:h-[550px] h-[300px] relative flex border'
+            style={{
+              background: `rgba(0,0,0,0.5) url(${image})`,
+              backgroundBlendMode: "darken",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+            className='w-full md:w-1/3 md:h-[550px] h-[300px] relative flex hover:opacity-90 duration-500 ease-in-out'
           >
             <div className={generateClassName(style)}>
               <p>{name}</p>
