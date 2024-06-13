@@ -55,7 +55,7 @@ const AllRunning = () => {
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
             }}
-            className='w-full md:w-1/3 md:h-[550px] h-[300px] relative flex hover:opacity-90 duration-500 ease-in-out'
+            className='w-full md:w-1/3 md:h-[450px] h-[300px] relative flex hover:opacity-90 duration-500 ease-in-out'
           >
             <div className={generateClassName(style)}>
               <p>{name}</p>

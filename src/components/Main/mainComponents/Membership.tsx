@@ -1,10 +1,13 @@
 import React from "react";
 import Button from "./Button";
+import productImg from "../../../static/images/product.jpg";
+import sportsImg from "../../../static/images/sports.jpg";
+import nikeImg from "../../../static/images/customize.jpg";
 
 const running = [
-  { title: "Member Product", item: "Exclusive", link: "/" },
-  { title: "Sports", item: "Movement", link: "/" },
-  { title: "Nike", item: "Customize", link: "/" },
+  { title: "Member Product", item: "Exclusive", link: "/", image: productImg },
+  { title: "Sports", item: "Movement", link: "/", image: sportsImg },
+  { title: "Nike", item: "Customize", link: "/", image: nikeImg },
 ];
 
 const generateClassName = (classes: string[]) => {
@@ -30,12 +33,12 @@ const Membership = () => {
         <p>NIKE MEMBERSHIP</p>
       </div>
       <div className='w-full h-fit flex flex-col md:flex-row justify-center gap-2'>
-        {running.map(({ title, item, link }) => (
+        {running.map(({ title, item, link, image }, i) => (
           <a
-            key={title}
+            key={i}
             href={link}
             style={{
-              //   background: `rgba(0,0,0,0.5) url(${image})`,
+              background: `rgba(0,0,0,0.5) url(${image})`,
               backgroundBlendMode: "darken",
               backgroundSize: "cover",
               backgroundPosition: "center",
@@ -46,7 +49,7 @@ const Membership = () => {
             <div className={generateClassName(style)}>
               <p className='text-[17px] font-normal'>{title}</p>
               <p>{item}</p>
-              <Button href={link}>Shop</Button>
+              {/* <Button href={link}>Shop</Button> */}
             </div>
           </a>
         ))}
