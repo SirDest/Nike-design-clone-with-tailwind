@@ -1,5 +1,3 @@
-import React from "react";
-import Button from "./Button";
 import productImg from "../../../static/images/product.jpg";
 import sportsImg from "../../../static/images/sports.jpg";
 import nikeImg from "../../../static/images/customize.jpg";
@@ -49,7 +47,6 @@ const Membership = () => {
             <div className={generateClassName(style)}>
               <p className='text-[17px] font-normal'>{title}</p>
               <p>{item}</p>
-              {/* <Button href={link}>Shop</Button> */}
             </div>
           </a>
         ))}
