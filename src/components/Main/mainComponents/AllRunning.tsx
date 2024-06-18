@@ -2,6 +2,7 @@ import React from "react";
 import apparelImg from "../../../static/images/product2.jpg";
 import footwearImg from "../../../static/images/product1.jpg";
 import accessoriesImg from "../../../static/images/product3.jpg";
+import { generateClassName } from "../../tailwind";
 
 const running = [
   {
@@ -20,10 +21,6 @@ const running = [
     link: "/",
   },
 ];
-
-const generateClassName = (classes: string[]) => {
-  return classes.join(" ");
-};
 
 const style = [
   "absolute",

@@ -1,9 +1,7 @@
-import Button from "./mainComponents/Button";
-import BlackButton from "../Reusable/BlackButton";
+import Button from "./Button";
+import BlackButton from "../../Reusable/BlackButton";
+import { generateClassName } from "../../tailwind";
 
-const generateClassName = (classes: string[]) => {
-  return classes.join(" ");
-};
 const style = [
   "absolute",
   "left-[40px]",

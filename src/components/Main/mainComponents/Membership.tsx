@@ -1,16 +1,13 @@
 import productImg from "../../../static/images/product.jpg";
 import sportsImg from "../../../static/images/sports.jpg";
 import nikeImg from "../../../static/images/customize.jpg";
+import { generateClassName } from "../../tailwind";
 
 const running = [
   { title: "Member Product", item: "Exclusive", link: "/", image: productImg },
   { title: "Sports", item: "Movement", link: "/", image: sportsImg },
   { title: "Nike", item: "Customize", link: "/", image: nikeImg },
 ];
-
-const generateClassName = (classes: string[]) => {
-  return classes.join(" ");
-};
 
 const style = [
   "absolute",

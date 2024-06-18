@@ -1,7 +1,6 @@
 import React from "react";
-const generateClassName = (classes: string[]) => {
-  return classes.join(" ");
-};
+import { generateClassName } from "../tailwind";
+
 const styles = [
   "border",
   "border-gray-500",

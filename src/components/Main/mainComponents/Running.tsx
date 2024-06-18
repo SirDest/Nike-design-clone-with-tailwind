@@ -1,10 +1,8 @@
 import Button from "./Button";
 import men from "../../../static/images/manjogging.jpg";
 import women from "../../../static/images/womanjogging.jpg";
+import { generateClassName } from "../../tailwind";
 
-const generateClassName = (classes: string[]) => {
-  return classes.join(" ");
-};
 const style = [
   "absolute",
   "left-[40px]",
