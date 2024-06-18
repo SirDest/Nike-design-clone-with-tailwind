@@ -1,6 +1,10 @@
 import Button from "./Button";
 import BlackButton from "../../Reusable/BlackButton";
 import { generateClassName } from "../../tailwind";
+import runImg from "../../../static/images/run.jpg";
+import primeImg from "../../../static/images/prime.jpg";
+import jordanImg from "../../../static/images/jordan.jpg";
+import bagImg from "../../../static/images/shop.jpg";
 
 const style = [
   "absolute",
@@ -14,19 +18,17 @@ const style = [
   "text-white",
 ];
 
-const mainStyle = [
-  "w-full",
-  "h-[250px]",
-  "md:h-[400px]",
-  "relative",
-  "border",
-  "bg-red-600",
-];
+const mainStyle = ["w-full", "h-[250px]", "md:h-[400px]", "relative", "border"];
 const products = [
-  { title: "Just Dropped", item: "Bag", link: "/" },
-  { title: "New Arrivals", item: "Jordans", link: "/" },
-  { title: "Don't Waste Your Energy", item: "Run", link: "/" },
-  { title: "Look Good, Play Good", item: "Prime", link: "/" },
+  { title: "Just Dropped", item: "Bag", link: "/", image: bagImg },
+  { title: "New Arrivals", item: "Jordans", link: "/", image: jordanImg },
+  { title: "Don't Waste Your Energy", item: "Run", link: "/", image: runImg },
+  {
+    title: "Look Good, Play Good",
+    item: "Prime",
+    link: "/",
+    image: primeImg,
+  },
 ];
 
 const Products = () => {
@@ -39,16 +41,16 @@ const Products = () => {
         <BlackButton>Shop New Arrivals</BlackButton>
       </div>
       <div className='w-full grid grid-cols-1 sm:grid-cols-2'>
-        {products.map(({ title, item, link }) => (
+        {products.map(({ title, item, link, image }) => (
           <div
             key={title}
-            //   style={{
-            //     background: `rgba(0,0,0,0.5) url(${image})`,
-            //     backgroundBlendMode: "darken",
-            //     backgroundSize: "cover",
-            //     backgroundPosition: "center",
-            //     backgroundRepeat: "no-repeat",
-            //   }}
+            style={{
+              background: `rgba(0,0,0,0.5) url(${image})`,
+              backgroundBlendMode: "darken",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
             className={generateClassName(mainStyle)}
           >
             <div className={generateClassName(style)}>
