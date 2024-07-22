@@ -1,4 +1,5 @@
 import "./App.css";
+import Certi from "./certificate/Certi";
 import Footer from "./components/Footer";
 import Hero from "./components/Landing/Hero";
 import Main from "./components/Main/Main";
@@ -9,6 +10,7 @@ function App() {
       <Hero />
       <Main />
       <Footer />
+      {/* <Certi /> */}
     </div>
   );
 }
