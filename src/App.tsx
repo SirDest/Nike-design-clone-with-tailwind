@@ -7,10 +7,10 @@ import Main from "./components/Main/Main";
 function App() {
   return (
     <div className='flex flex-col'>
-      <Hero />
+      {/* <Hero />
       <Main />
-      <Footer />
-      {/* <Certi /> */}
+      <Footer /> */}
+      <Certi />
     </div>
   );
 }
