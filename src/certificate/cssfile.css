@@ -1,0 +1,53 @@
+.certificate-div {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+.certificate {
+  width: 630px;
+  position: relative;
+}
+.certificate-sub-div1 {
+  position: absolute;
+  width: fit-content;
+  height: 150px;
+  top: 112px;
+  left: 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.certificate-text {
+  font-size: 10px;
+  font-weight: 600;
+}
+.certificate-name {
+  font-weight: 700;
+  font-size: 22px;
+}
+.certificate-on {
+  font-weight: 600;
+  font-weight: 600;
+}
+.certificate-sub-div2 {
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  bottom: 40px;
+  right: 64px;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  font-size: 9px;
+  font-weight: 600;
+}
+.certificate-sub-div2 a {
+  font-size: #1d4ed8;
+}
+.certificate-div button {
+  background-color: #4ade80;
+  margin: auto;
+  width: fit-content;
+  padding: 16px;
+}
