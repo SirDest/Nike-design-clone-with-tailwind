@@ -1,7 +1,7 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 
 import jsPDF from "jspdf";
-import "jspdf/dist/polyfills.es.js";
+// import "jspdf/dist/polyfills.es.js";
 import certificateImg from "../../src/static/images/certificate.jpeg";
 
 const Certi = () => {
