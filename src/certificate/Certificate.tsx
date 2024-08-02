@@ -28,8 +28,6 @@ const Certi = () => {
         // y: 650, // Adjust y-position to be below the image
         width: 570, // Width of the HTML content
       });
-    } else {
-      doc.save("certificate.pdf");
     }
   };
 

@@ -8,11 +8,11 @@ import Main from "./components/Main/Main";
 function App() {
   return (
     <div className='flex flex-col'>
-      {/* <Hero />
+      <Hero />
       <Main />
-      <Footer /> */}
-      {/* <Certi /> */}
-      <Certicss />
+      <Footer />
+      {/* <Certi />
+       <Certicss /> */}
     </div>
   );
 }
